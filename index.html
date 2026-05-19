@@ -120,6 +120,7 @@
       margin-bottom: 18px;
       border-radius: 20px;
       padding: 14px;
+      position: relative;
     }
 
     label,
@@ -227,31 +228,48 @@
       border: 1px solid rgba(255,255,255,0.12);
     }
 
-    .iti{
-  width:100%;
-  position:relative;
-  z-index:20;
-}
+    .iti {
+      width: 100%;
+      position: relative;
+      z-index: 30;
+    }
 
-.iti input{
-  width:100% !important;
-  padding-left:90px !important;
-  border-radius:14px;
-}
+    .iti input {
+      width: 100% !important;
+      border-radius: 14px;
+      padding-left: 92px !important;
+    }
 
-.iti__selected-flag{
-  border-radius:14px 0 0 14px;
-}
+    .iti__selected-flag {
+      border-radius: 14px 0 0 14px;
+    }
 
-.iti__country-list{
-  z-index:99999 !important;
-  background:#ffffff !important;
-  color:#111111 !important;
-  border-radius:16px !important;
-  max-height:260px !important;
-  overflow-y:auto !important;
-  box-shadow:0 10px 30px rgba(0,0,0,0.2);
-}
+    .iti__country-list {
+      z-index: 999999 !important;
+      background: #ffffff !important;
+      color: #111111 !important;
+      border: 1px solid rgba(0,0,0,0.12) !important;
+      border-radius: 16px !important;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.25) !important;
+      max-height: 280px !important;
+      overflow-y: auto !important;
+      opacity: 1 !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+    }
+
+    .iti__country-list * {
+      color: #111111 !important;
+    }
+
+    .iti__search-input {
+      background: #ffffff !important;
+      color: #111111 !important;
+    }
+
+    .iti__flag-container {
+      z-index: 31;
+    }
 
     @media(max-width:768px) {
       .container {
@@ -364,6 +382,8 @@
     initialCountry: "in",
     separateDialCode: true,
     preferredCountries: ["in", "ae", "qa", "sa", "kw", "us", "gb"],
+    dropdownContainer: document.body,
+    nationalMode: false,
     utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js"
   });
 
