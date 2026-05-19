@@ -20,13 +20,12 @@
     body {
       font-family: Arial, sans-serif;
       padding: 24px;
-      color: #fff;
+      color: #111;
       background:
-        radial-gradient(circle at 15% 20%, rgba(255, 64, 170, 0.35) 0%, transparent 22%),
-        radial-gradient(circle at 50% 35%, rgba(126, 34, 206, 0.35) 0%, transparent 26%),
-        radial-gradient(circle at 85% 15%, rgba(168, 85, 247, 0.30) 0%, transparent 20%),
-        radial-gradient(circle at 20% 85%, rgba(109, 40, 217, 0.28) 0%, transparent 24%),
-        linear-gradient(135deg, #12051f 0%, #2a0f4d 38%, #7c1fa1 72%, #b3128a 100%);
+        radial-gradient(circle at 10% 15%, rgba(196, 181, 253, 0.45) 0%, transparent 24%),
+        radial-gradient(circle at 85% 15%, rgba(221, 214, 254, 0.55) 0%, transparent 22%),
+        radial-gradient(circle at 20% 85%, rgba(233, 213, 255, 0.45) 0%, transparent 24%),
+        linear-gradient(135deg, #ffffff 0%, #f7f2ff 48%, #efe4ff 100%);
       position: relative;
       overflow-x: hidden;
     }
@@ -36,26 +35,26 @@
       content: "";
       position: fixed;
       border-radius: 50%;
-      filter: blur(70px);
-      opacity: 0.55;
+      filter: blur(80px);
+      opacity: 0.45;
       pointer-events: none;
       z-index: 0;
     }
 
     body::before {
-      width: 340px;
-      height: 340px;
-      left: -100px;
-      bottom: -100px;
-      background: rgba(255, 61, 177, 0.28);
+      width: 300px;
+      height: 300px;
+      left: -90px;
+      bottom: -90px;
+      background: rgba(216, 180, 254, 0.60);
     }
 
     body::after {
-      width: 280px;
-      height: 280px;
+      width: 260px;
+      height: 260px;
       right: -70px;
-      top: 70px;
-      background: rgba(120, 80, 255, 0.28);
+      top: 60px;
+      background: rgba(196, 181, 253, 0.55);
     }
 
     .container {
@@ -65,13 +64,13 @@
       margin: auto;
       padding: 28px;
       border-radius: 30px;
-      background: rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.78);
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
-      border: 1px solid rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.75);
       box-shadow:
-        0 25px 70px rgba(0,0,0,0.35),
-        inset 0 1px 0 rgba(255,255,255,0.12);
+        0 18px 55px rgba(139,92,246,0.14),
+        inset 0 1px 0 rgba(255,255,255,0.90);
     }
 
     .logo {
@@ -84,23 +83,23 @@
     }
 
     .logo .mind {
-      color: #ffffff;
+      color: #111111;
     }
 
     .logo .lap {
-      color: #c084fc;
+      color: #8b5cf6;
     }
 
     h1 {
       text-align: center;
-      color: #ffffff;
+      color: #6d28d9;
       margin: 0 0 10px;
       font-size: 34px;
     }
 
     .subtitle {
       text-align: center;
-      color: rgba(255,255,255,0.78);
+      color: #5f5f72;
       margin-bottom: 28px;
       line-height: 1.7;
       font-size: 15px;
@@ -109,11 +108,11 @@
     .field,
     .question,
     .result {
-      background: rgba(255,255,255,0.10);
-      border: 1px solid rgba(255,255,255,0.14);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.18);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      background: rgba(255,255,255,0.92);
+      border: 1px solid rgba(221, 214, 254, 0.95);
+      box-shadow: 0 10px 28px rgba(139,92,246,0.08);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
     }
 
     .field {
@@ -125,14 +124,13 @@
 
     label,
     .question p {
-      color: #ffffff;
+      color: #2b1b52;
     }
 
     label {
       display: block;
       margin-bottom: 8px;
       font-weight: bold;
-      color: #ffffff;
     }
 
     input,
@@ -140,9 +138,9 @@
       width: 100%;
       padding: 14px;
       border-radius: 14px;
-      border: 1px solid rgba(255,255,255,0.18);
+      border: 1px solid #d8c6ff;
       font-size: 15px;
-      background: rgba(255,255,255,0.95);
+      background: #fff;
       color: #111111;
       outline: none;
     }
@@ -150,7 +148,7 @@
     input:focus,
     select:focus,
     button:focus {
-      outline: 2px solid rgba(255,255,255,0.35);
+      outline: 2px solid rgba(139,92,246,0.28);
       outline-offset: 2px;
     }
 
@@ -163,7 +161,7 @@
 
     .question:hover {
       transform: translateY(-2px);
-      box-shadow: 0 14px 34px rgba(255,255,255,0.10);
+      box-shadow: 0 14px 34px rgba(139,92,246,0.10);
     }
 
     .question p {
@@ -185,12 +183,12 @@
       cursor: pointer;
       margin-top: 10px;
       transition: 0.2s;
-      box-shadow: 0 12px 30px rgba(139,92,246,0.35);
+      box-shadow: 0 12px 30px rgba(139,92,246,0.22);
     }
 
     button:hover {
       transform: translateY(-2px);
-      opacity: 0.95;
+      opacity: 0.96;
     }
 
     .result {
@@ -201,14 +199,14 @@
     }
 
     .result h2 {
-      color: #ffffff;
+      color: #6d28d9;
       margin-top: 0;
       line-height: 1.4;
     }
 
     .result h3,
     .result p {
-      color: rgba(255,255,255,0.92);
+      color: #3c3c4d;
     }
 
     .whatsapp-btn {
@@ -220,12 +218,12 @@
     .notice {
       margin-top: 25px;
       font-size: 14px;
-      color: rgba(255,255,255,0.75);
+      color: #555;
       line-height: 1.6;
-      background: rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.72);
       padding: 15px;
       border-radius: 18px;
-      border: 1px solid rgba(255,255,255,0.12);
+      border: 1px solid rgba(221, 214, 254, 0.95);
     }
 
     .iti {
@@ -248,9 +246,9 @@
       z-index: 999999 !important;
       background: #ffffff !important;
       color: #111111 !important;
-      border: 1px solid rgba(0,0,0,0.12) !important;
+      border: 1px solid rgba(0,0,0,0.10) !important;
       border-radius: 16px !important;
-      box-shadow: 0 16px 40px rgba(0,0,0,0.25) !important;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.18) !important;
       max-height: 280px !important;
       overflow-y: auto !important;
       opacity: 1 !important;
@@ -265,10 +263,6 @@
     .iti__search-input {
       background: #ffffff !important;
       color: #111111 !important;
-    }
-
-    .iti__flag-container {
-      z-index: 31;
     }
 
     @media(max-width:768px) {
