@@ -8,249 +8,248 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css"/>
 
   <style>
-    *{
-      box-sizing:border-box;
+    * {
+      box-sizing: border-box;
     }
 
-    html, body{
-      margin:0;
-      min-height:100%;
+    html, body {
+      margin: 0;
+      min-height: 100%;
     }
 
-    body{
+    body {
       font-family: Arial, sans-serif;
-      padding:24px;
-      color:#fff;
+      padding: 24px;
+      color: #fff;
       background:
         radial-gradient(circle at 15% 20%, rgba(255, 64, 170, 0.35) 0%, transparent 22%),
         radial-gradient(circle at 50% 35%, rgba(126, 34, 206, 0.35) 0%, transparent 26%),
         radial-gradient(circle at 85% 15%, rgba(168, 85, 247, 0.30) 0%, transparent 20%),
         radial-gradient(circle at 20% 85%, rgba(109, 40, 217, 0.28) 0%, transparent 24%),
         linear-gradient(135deg, #12051f 0%, #2a0f4d 38%, #7c1fa1 72%, #b3128a 100%);
-      position:relative;
-      overflow-x:hidden;
+      position: relative;
+      overflow-x: hidden;
     }
 
     body::before,
-    body::after{
-      content:"";
-      position:fixed;
-      border-radius:50%;
-      filter:blur(70px);
-      opacity:0.55;
-      pointer-events:none;
-      z-index:0;
+    body::after {
+      content: "";
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(70px);
+      opacity: 0.55;
+      pointer-events: none;
+      z-index: 0;
     }
 
-    body::before{
-      width:340px;
-      height:340px;
-      left:-100px;
-      bottom:-100px;
-      background:rgba(255, 61, 177, 0.28);
+    body::before {
+      width: 340px;
+      height: 340px;
+      left: -100px;
+      bottom: -100px;
+      background: rgba(255, 61, 177, 0.28);
     }
 
-    body::after{
-      width:280px;
-      height:280px;
-      right:-70px;
-      top:70px;
-      background:rgba(120, 80, 255, 0.28);
+    body::after {
+      width: 280px;
+      height: 280px;
+      right: -70px;
+      top: 70px;
+      background: rgba(120, 80, 255, 0.28);
     }
 
-    .container{
-      position:relative;
-      z-index:1;
-      max-width:860px;
-      margin:auto;
-      padding:28px;
-      border-radius:30px;
-      background:rgba(255,255,255,0.08);
-      backdrop-filter:blur(18px);
-      -webkit-backdrop-filter:blur(18px);
-      border:1px solid rgba(255,255,255,0.18);
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 860px;
+      margin: auto;
+      padding: 28px;
+      border-radius: 30px;
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(255,255,255,0.18);
       box-shadow:
         0 25px 70px rgba(0,0,0,0.35),
         inset 0 1px 0 rgba(255,255,255,0.12);
     }
 
-    .logo{
-      text-align:center;
-      font-size:44px;
-      font-weight:900;
-      margin-bottom:10px;
-      letter-spacing:-2px;
-      line-height:1;
+    .logo {
+      text-align: center;
+      font-size: 44px;
+      font-weight: 900;
+      margin-bottom: 10px;
+      letter-spacing: -2px;
+      line-height: 1;
     }
 
-    .logo .mind{
-      color:#ffffff;
+    .logo .mind {
+      color: #ffffff;
     }
 
-    .logo .lap{
-      color:#c084fc;
+    .logo .lap {
+      color: #c084fc;
     }
 
-    h1{
-      text-align:center;
-      color:#ffffff;
-      margin:0 0 10px;
-      font-size:34px;
+    h1 {
+      text-align: center;
+      color: #ffffff;
+      margin: 0 0 10px;
+      font-size: 34px;
     }
 
-    .subtitle{
-      text-align:center;
-      color:rgba(255,255,255,0.78);
-      margin-bottom:28px;
-      line-height:1.7;
-      font-size:15px;
+    .subtitle {
+      text-align: center;
+      color: rgba(255,255,255,0.78);
+      margin-bottom: 28px;
+      line-height: 1.7;
+      font-size: 15px;
     }
 
     .field,
     .question,
-    .result{
-      background:rgba(255,255,255,0.10);
-      border:1px solid rgba(255,255,255,0.14);
-      box-shadow:0 10px 30px rgba(0,0,0,0.18);
-      backdrop-filter:blur(12px);
-      -webkit-backdrop-filter:blur(12px);
+    .result {
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.14);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
     }
 
-    .field{
-      margin-bottom:18px;
-      border-radius:20px;
-      padding:14px;
+    .field {
+      margin-bottom: 18px;
+      border-radius: 20px;
+      padding: 14px;
     }
 
     label,
-    .question p{
-      color:#ffffff;
+    .question p {
+      color: #ffffff;
     }
 
-    label{
-      display:block;
-      margin-bottom:8px;
-      font-weight:bold;
-      color:#ffffff;
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #ffffff;
     }
 
     input,
-    select{
-      width:100%;
-      padding:14px;
-      border-radius:14px;
-      border:1px solid rgba(255,255,255,0.18);
-      font-size:15px;
-      background:rgba(255,255,255,0.95);
-      color:#111111;
-      outline:none;
+    select {
+      width: 100%;
+      padding: 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.18);
+      font-size: 15px;
+      background: rgba(255,255,255,0.95);
+      color: #111111;
+      outline: none;
     }
 
     input:focus,
     select:focus,
-    button:focus{
-      outline:2px solid rgba(255,255,255,0.35);
-      outline-offset:2px;
+    button:focus {
+      outline: 2px solid rgba(255,255,255,0.35);
+      outline-offset: 2px;
     }
 
-    .question{
-      padding:18px;
-      border-radius:20px;
-      margin-bottom:15px;
-      transition:0.2s;
+    .question {
+      padding: 18px;
+      border-radius: 20px;
+      margin-bottom: 15px;
+      transition: 0.2s;
     }
 
-    .question:hover{
-      transform:translateY(-2px);
-      box-shadow:0 14px 34px rgba(255,255,255,0.10);
+    .question:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 34px rgba(255,255,255,0.10);
     }
 
-    .question p{
-      margin-top:0;
-      font-weight:bold;
-      line-height:1.5;
-      margin-bottom:12px;
+    .question p {
+      margin-top: 0;
+      font-weight: bold;
+      line-height: 1.5;
+      margin-bottom: 12px;
     }
 
-    button{
-      width:100%;
-      padding:16px;
-      border:none;
-      border-radius:16px;
-      background:linear-gradient(135deg,#8b5cf6,#6d28d9);
-      color:white;
-      font-size:16px;
-      font-weight:bold;
-      cursor:pointer;
-      margin-top:10px;
-      transition:0.2s;
-      box-shadow:0 12px 30px rgba(139,92,246,0.35);
+    button {
+      width: 100%;
+      padding: 16px;
+      border: none;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: 0.2s;
+      box-shadow: 0 12px 30px rgba(139,92,246,0.35);
     }
 
-    button:hover{
-      transform:translateY(-2px);
-      opacity:0.95;
+    button:hover {
+      transform: translateY(-2px);
+      opacity: 0.95;
     }
 
-    .result{
-      display:none;
-      margin-top:25px;
-      padding:25px;
-      border-radius:24px;
+    .result {
+      display: none;
+      margin-top: 25px;
+      padding: 25px;
+      border-radius: 24px;
     }
 
-    .result h2{
-      color:#ffffff;
-      margin-top:0;
-      line-height:1.4;
+    .result h2 {
+      color: #ffffff;
+      margin-top: 0;
+      line-height: 1.4;
     }
 
     .result h3,
-    .result p{
-      color:rgba(255,255,255,0.92);
+    .result p {
+      color: rgba(255,255,255,0.92);
     }
 
-    .whatsapp-btn{
-      background:linear-gradient(135deg,#25D366,#1ebe5d);
-      margin-top:15px;
-      box-shadow:none;
+    .whatsapp-btn {
+      background: linear-gradient(135deg, #25D366, #1ebe5d);
+      margin-top: 15px;
+      box-shadow: none;
     }
 
-    .notice{
-      margin-top:25px;
-      font-size:14px;
-      color:rgba(255,255,255,0.75);
-      line-height:1.6;
-      background:rgba(255,255,255,0.08);
-      padding:15px;
-      border-radius:18px;
-      border:1px solid rgba(255,255,255,0.12);
+    .notice {
+      margin-top: 25px;
+      font-size: 14px;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.6;
+      background: rgba(255,255,255,0.08);
+      padding: 15px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.12);
     }
 
-    .iti{
-      width:100%;
+    .iti {
+      width: 100%;
     }
 
-    .iti__country-list{
-      color:#111111;
+    .iti__country-list {
+      color: #111111;
     }
 
-    @media(max-width:768px){
-      .container{
-        padding:18px;
+    @media(max-width:768px) {
+      .container {
+        padding: 18px;
       }
 
-      .logo{
-        font-size:34px;
+      .logo {
+        font-size: 34px;
       }
 
-      h1{
-        font-size:26px;
+      h1 {
+        font-size: 26px;
       }
     }
   </style>
 </head>
-
 <body>
 
 <div class="container">
@@ -358,23 +357,23 @@
     if (total <= 10) {
       return {
         title: "Mild Emotional Strain",
-        desc: "You may be experiencing temporary emotional stress or low mood."
+        desc: "You may be experiencing temporary emotional stress or low mood. Rest, support, and self-care may help."
       };
     } else if (total <= 25) {
       return {
         title: "Moderate Emotional Difficulty",
         desc: "You may be developing noticeable emotional struggles that could affect your routine and motivation."
-      } else if (total <= 35) {
-        return {
-          title: "High Emotional Impact",
-          desc: "Your emotional wellbeing may be significantly affected. Professional support could be beneficial."
-        };
-      } else {
-        return {
-          title: "Severe Distress Zone",
-          desc: "Your emotional state may be strongly affecting your daily functioning and wellbeing."
-        };
-      }
+      };
+    } else if (total <= 35) {
+      return {
+        title: "High Emotional Impact",
+        desc: "Your emotional wellbeing may be significantly affected. Professional support could be beneficial."
+      };
+    } else {
+      return {
+        title: "Severe Distress Zone",
+        desc: "Your emotional state may be strongly affecting your daily functioning and wellbeing. Speaking with a qualified mental health professional is strongly recommended."
+      };
     }
   }
 
